@@ -4,7 +4,10 @@ abstract class AppTheme {
   static final LinearGradient gradientLigth = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
-    colors: [Color(0xFF00D921), Color(0xFF14BEEE)],
+    colors: [
+      Color.fromARGB(255, 240, 124, 201),
+      Color.fromARGB(255, 249, 240, 117)
+    ],
   );
   // Цвета для темной темы
   static const Color darkPrimaryColor = Color(0xFF1F1F1F);
@@ -23,11 +26,11 @@ abstract class AppTheme {
 
   static ThemeData ligthTheme = ThemeData(
     appBarTheme: AppBarTheme(backgroundColor: Colors.transparent, elevation: 0),
-    primaryColor: Color(0xFF00E457),
+    primaryColor: Color.fromARGB(255, 128, 184, 7),
     colorScheme: ColorScheme(
       primary: Color(0xFF00E457),
       onPrimary: Colors.white,
-      secondary: Color(0xFF14BEEE),
+      secondary: Color.fromARGB(255, 238, 20, 158),
       onSecondary: Colors.white,
       surface: Colors.white,
       onSurface: Colors.black87,

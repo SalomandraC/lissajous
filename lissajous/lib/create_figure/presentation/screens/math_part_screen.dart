@@ -126,6 +126,7 @@ class _CreateFigurePageState extends State<CreateFigurePage>
     final strings = _getLocalizedStrings(locale.languageCode);
 
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: GradientAppBar(
         title: strings['title']!,
         isDarkTheme: theme.brightness == Brightness.dark,
@@ -444,7 +445,18 @@ class _CreateFigurePageState extends State<CreateFigurePage>
     );
   }
 
+  String _getColorName(Color color) {
+    if (color == Colors.red) return 'Red';
+    if (color == Colors.blue) return 'Blue';
+    if (color == Colors.green) return 'Green';
+    if (color == Colors.purple) return 'Purple';
+    if (color == Colors.orange) return 'Orange';
+    return 'Custom';
+  }
+
   DropdownMenuItem<Color> _buildColorItem(Color color) {
+    final colorName = _getColorName(color);
+
     return DropdownMenuItem(
       value: color,
       child: Row(
@@ -452,10 +464,16 @@ class _CreateFigurePageState extends State<CreateFigurePage>
           Container(
             width: 20,
             height: 20,
-            color: color,
-            margin: const EdgeInsets.only(right: 8),
+            decoration: BoxDecoration(
+              color: color,
+              border: Border.all(color: Colors.grey),
+            ),
           ),
-          Text(color.toString().split('(')[1].split(')')[0]),
+          const SizedBox(width: 8),
+          Text(
+            colorName,
+            style: const TextStyle(fontSize: 14),
+          ),
         ],
       ),
     );
