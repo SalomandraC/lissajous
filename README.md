@@ -7,7 +7,7 @@
 #### Для Windows (ПК):
 1. Скачайте файл `app_windows.rar` из репозитория
 2. Распакуйте архив в любую папку на компьютере
-3. Запустите `Lissajous.exe` из распакованной папки
+3. Запустите `lissajous.exe` из распакованной папки
 
 #### Для Android:
 1. Скачайте файл `app_release.apk` на телефон
@@ -33,7 +33,7 @@
 #### For Windows (PC):
 1. Download the `app_windows.rar` file from the repository
 2. Extract the archive to any folder on your computer
-3. Run `Lissajous.exe` from the extracted folder
+3. Run `lissajous.exe` from the extracted folder
 
 #### For Android:
 1. Download the `app_release.apk` file to your phone
